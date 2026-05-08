@@ -91,7 +91,7 @@ namespace Overlay
 	StatsWindow::StatsWindow()
 		: Window(nullptr,
 			{ 0, 0, getWidth(), static_cast<int>(Config::statsRows.get().size()) * ROW_HEIGHT + BORDER },
-			0, Config::statsTransparency.get(), Config::statsHotKey.get())
+			WS_VISIBLE, Config::statsTransparency.get(), Config::statsHotKey.get())
 		, m_presentCount(0)
 		, m_isRowEnabled{}
 		, m_tickCount(0)
